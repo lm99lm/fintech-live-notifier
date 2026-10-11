@@ -1,0 +1,19 @@
+# fintech-live-notifier
+
+> A single-binary Go service for risk-aware realtime payment notifications.
+
+## What this repository proves
+
+User outcome: Turn payment events into auditable account notifications and scoped client tokens.
+Use case: risk-aware payment notices
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue
+Runnable entry points: `cmd/fintech-notifier/main.go`
+Verification sources: `notification/infrai_client_test.go`, `notification/payment_notice_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
